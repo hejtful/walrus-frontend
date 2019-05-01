@@ -1,0 +1,47 @@
+{
+  "name": "walrus-frontend",
+  "version": "1.0.0",
+  "description": "Walrus project frontend app",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^2.1.0",
+    "lint-staged": "^8.1.5",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "1.17.0",
+    "pretty-quick": "^1.10.0",
+    "react-hot-loader": "^4.8.4"
+  },
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "pretty-quick --staged",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
