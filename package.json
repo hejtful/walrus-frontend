@@ -1,8 +1,10 @@
 {
   "name": "walrus-frontend",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "description": "Walrus project frontend app",
-  "main": "index.js",
+  "homepage": "https://hejtful.github.io/walrus-frontend/",
+  "repository": "https://github.com/hejtful/walrus-frontend",
+  "main": "index.html",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -31,6 +33,7 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
+    "build": "parcel build src/index.html -d build/ --public-url ./",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -47,7 +50,7 @@
       "git add"
     ]
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["walrus"],
+  "author": "@hejtful",
   "license": "ISC"
 }
